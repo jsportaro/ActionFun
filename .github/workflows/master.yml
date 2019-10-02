@@ -1,0 +1,19 @@
+name: ActionFun Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Make build folder
+      run: |
+        mk build
+        cd build
+    - name: Run cmake
+      run: cmake
+    - name: Run make
+      run: make
