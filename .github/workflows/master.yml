@@ -9,10 +9,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: CD
-      run: cd
-    - name: ls
-      run: ls
+    - name: Get ready
+      run: |
+        mkdir build
+        cd build
+        pwd
     - name: Run cmake
       run: cmake [options] -S . -B build
     - name: go to build
