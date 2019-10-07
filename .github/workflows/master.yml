@@ -9,10 +9,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Make build folder
-      run:  mkdir build
-    - name: Change working directory
-      working-directory: build
     - name: Run cmake
       run: cmake
     - name: Run make
