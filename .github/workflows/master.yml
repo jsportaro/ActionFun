@@ -15,5 +15,9 @@ jobs:
       run: ls
     - name: Run cmake
       run: cmake [options] -S . -B build
+    - name: go to build
+      run: |
+        cd build
+        ls
     - name: Run make
       run: make ./build
