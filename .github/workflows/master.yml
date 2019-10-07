@@ -20,4 +20,4 @@ jobs:
         cd build
         ls
     - name: Run make
-      run: make ./build
+      run: make
