@@ -32,6 +32,6 @@ jobs:
           cmake ../
       - name: Run cl
         run: |
-          cl
+          set
       
           
