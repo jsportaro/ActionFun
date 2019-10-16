@@ -30,6 +30,7 @@ jobs:
           mkdir build
           cd build
           cmake ../
+          dir
       - name: Run cl
         run: |
           set
