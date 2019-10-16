@@ -3,7 +3,7 @@ name: ActionFun Build
 on: [push]
 
 jobs:
-  build:
+  build-linux:
 
     runs-on: ubuntu-18.04
     
@@ -18,3 +18,17 @@ jobs:
       run: |
         cd build
         make
+  
+  build-windows:
+    
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v1
+      - name: CMAKE
+        run: |
+          mkdir build
+          cd build
+          cmake ../
+      
+          
