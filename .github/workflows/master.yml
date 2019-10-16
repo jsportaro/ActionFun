@@ -30,5 +30,8 @@ jobs:
           mkdir build
           cd build
           cmake ../
+      - name: Run cl
+        run: |
+          cl
       
           
