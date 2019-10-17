@@ -19,6 +19,7 @@ jobs:
         cd build
         make
         ctest --verbose
+        ls
     - uses: actions/upload-artifact@master
       with:
         name: linux-build-debug
