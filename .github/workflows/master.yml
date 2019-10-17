@@ -18,11 +18,12 @@ jobs:
       run: |
         cd build
         make
+        ctest --verbose
     - uses: actions/upload-artifact@master
-        with:
-          name: linux-build
-          path: ./build
-          
+      with:
+        name: linux-build-debug
+        path: ./build/Debug
+      
   build-windows:
     
     runs-on: windows-latest
@@ -38,11 +39,11 @@ jobs:
         run: |
           cd build
           "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" ActionFun.sln
-          ctest
+          ctest --verbose
       - uses: actions/upload-artifact@master
         with:
-          name: windows-build
-          path: ./build
+          name: windows-build-debug
+          path: ./build/Debug
 
     
       
