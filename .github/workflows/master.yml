@@ -38,8 +38,8 @@ jobs:
           ctest
       - uses: actions/upload-artifact@master
         with:
-        name: windows-build
-        path: ./build
+          name: windows-build
+          path: ./build
 
     
       
