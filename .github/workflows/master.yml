@@ -19,11 +19,11 @@ jobs:
         cd build
         make
         ctest --verbose
-        ls
+        ls ActionFun
     - uses: actions/upload-artifact@master
       with:
         name: linux-build-debug
-        path: ./build/Debug
+        path: ./build/ActionFun
       
   build-windows:
     
